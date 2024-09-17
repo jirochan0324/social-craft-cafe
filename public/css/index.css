@@ -277,6 +277,7 @@ progress {
 
 html {
   font-size: 62.5%;
+  color: #27211c;
 }
 
 html, body {
@@ -4546,10 +4547,15 @@ header ul {
 header ul li {
   margin-left: 24px;
   line-height: 80px;
-  height: 80px;
+}
+header ul li a {
+  text-decoration: none;
+  color: #C1A78D;
+  font-size: 1.6rem;
+  font-weight: 700;
   position: relative;
 }
-header ul li::after {
+header ul li a::after {
   position: absolute;
   top: 50%;
   bottom: 50%;
@@ -4564,13 +4570,7 @@ header ul li::after {
   transition: all 0.2s;
   opacity: 0;
 }
-header ul li a {
-  text-decoration: none;
-  color: #C1A78D;
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-header ul li:hover::after {
+header ul li a:hover::after {
   opacity: 1;
   transform: translateY(-20px);
 }
@@ -4625,11 +4625,6 @@ header ul li:hover::after {
 
 .section-body {
   margin: 160px 0px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.section-body .section-content {
   width: 100%;
 }
 
@@ -4695,7 +4690,7 @@ header ul li:hover::after {
   display: flex;
   justify-content: space-between;
   opacity: 0;
-  transition: all 1s;
+  transition: ease 0.4s;
 }
 .work-body .work-wrap .work-introduction-body .work-introduction-list .img-wrap {
   width: 100%;
@@ -4758,12 +4753,28 @@ header ul li:hover::after {
   opacity: 1;
 }
 
-.accsess-body .map-body {
+.accsess-body .shop-body .map-body {
   width: 100%;
   max-width: 800px;
 }
-.accsess-body .map-body .map {
+.accsess-body .shop-body .map-body .map {
   width: 100%;
   max-width: 560px;
   height: 400px;
+}
+.accsess-body .shop-body .shop {
+  border: solid;
+}
+.accsess-body .shop-body .shop table td {
+  font-size: 1.8rem;
+}
+.accsess-body .shop-body .shop table td:nth-of-type(1) {
+  letter-spacing: 1.5;
+}
+.accsess-body .shop-body .shop table td:nth-of-type(2) {
+  padding: 0px 10px;
+  font-size: 1.4rem;
+}
+.accsess-body .shop-body .shop table td:nth-child(3) {
+  letter-spacing: 2;
 }/*# sourceMappingURL=index.css.map */

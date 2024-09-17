@@ -25,33 +25,32 @@ header{
         li{
             margin-left: 24px;
             line-height: 80px;
-            height: 80px;
-            position: relative;
-            &::after{
-                position: absolute;
-                top: 50%;
-                bottom: 50%;
-                left: 50%;
-                right: 50%;
-                transform: translate(-50%,-50%);
-                content: "";
-                width: 8px;
-                height: 8px;
-                border-radius: 9999px;
-                background-color: $main;
-                transition: all .2s;
-                opacity: 0;
-            }
             a{
                 text-decoration: none;
                 color: #C1A78D;
                 font-size: 1.6rem;
                 font-weight: 700;
-            }
-            &:hover{
+                position: relative;
                 &::after{
-                    opacity: 1;
-                    transform: translateY(-20px);
+                    position: absolute;
+                    top: 50%;
+                    bottom: 50%;
+                    left: 50%;
+                    right: 50%;
+                    transform: translate(-50%,-50%);
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 9999px;
+                    background-color: $main;
+                    transition: all .2s;
+                    opacity: 0;
+                }
+                &:hover{
+                    &::after{
+                        opacity: 1;
+                        transform: translateY(-20px);
+                    }
                 }
             }
         }
@@ -108,12 +107,7 @@ header{
 
 .section-body{
     margin: 160px 0px;
-    display: flex;
-    justify-content: center;
     width: 100%;
-    .section-content{
-        width: 100%;
-    }
 }
 
 .consept-body{
@@ -176,7 +170,7 @@ header{
                 display: flex;
                 justify-content: space-between;
                 opacity: 0;
-                transition: all 1s;
+                transition: ease .4s;
                 .img-wrap{
                     width: 100%;
                     max-width: 480px;
@@ -245,13 +239,34 @@ header{
 }
 
 .accsess-body{
-    .map-body{
-        width: 100%;
-        max-width: 800px;
-        .map{
+
+    .shop-body{
+        .map-body{
             width: 100%;
-            max-width: 560px;
-            height: 400px;
+            max-width: 800px;
+            .map{
+                width: 100%;
+                max-width: 560px;
+                height: 400px;
+            }
+        }
+        .shop{
+            border: solid;
+            table{
+                td{
+                    font-size: 1.8rem;
+                    &:nth-of-type(1){
+                        letter-spacing: 1.5;
+                    }
+                    &:nth-of-type(2){
+                        padding:0px 10px;
+                        font-size: 1.4rem;
+                    }
+                    &:nth-child(3){
+                        letter-spacing: 2;
+                    }
+                }
+            }
         }
     }
 }
